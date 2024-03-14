@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
     tg.bgColor = '8a6565';
     // Пример отображения данных на странице
     var userInfoElement = document.createElement('div');
-    userInfoElement.textContent = 'User ID: ' + tg_data.user.id + ', Country: ' + tg_data.user.country + ', Language: ' + tg_data.user.language;
+    userInfoElement.textContent = 'User ID: ' + tg_data.user.id + ', Name: ' + tg_data.user.name;
     document.body.appendChild(userInfoElement);
 </script>
 </body>
