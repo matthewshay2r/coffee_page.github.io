@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+      background-color: #8a6565;
+    }
+  </style>
 </head>
 <body>
-  <script>
-    var WebApp = window.Telegram.WebApp;
-    var initData = WebApp.initData;
-
+<h1>WebApp</h1>
+<script>
+    var tg = window.Telegram.WebApp;
+    var tg_data = tg.initData;
+    tg.bgColor = '8a6565';
     // Пример отображения данных на странице
     var userInfoElement = document.createElement('div');
-    userInfoElement.textContent = 'User ID: ' + initData.user.id + ', Country: ' + initData.user.country + ', Language: ' + initData.user.language;
+    userInfoElement.textContent = 'User ID: ' + tg_data.user.id + ', Country: ' + tg_data.user.country + ', Language: ' + tg_data.user.language;
     document.body.appendChild(userInfoElement);
-  </script>
+</script>
 </body>
 </html>
