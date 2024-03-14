@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
   <script>
-  var WebApp = window.Telegram.WebApp;
-  WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
+    var WebApp = window.Telegram.WebApp;
+    var initData = WebApp.initData;
+
+    // Пример отображения данных на странице
+    var userInfoElement = document.createElement('div');
+    userInfoElement.textContent = 'User ID: ' + initData.user.id + ', Country: ' + initData.user.country + ', Language: ' + initData.user.language;
+    document.body.appendChild(userInfoElement);
   </script>
 </body>
 </html>
