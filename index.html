@@ -14,8 +14,7 @@
 <h1>WebApp</h1>
 <script>
     let tg = window.Telegram.WebApp;
-    let tg_data = tg.initData;
-    tg.bgColor = '8a6565';
+    let tg_data = tg.initDataUnsafe;
     // Пример отображения данных на странице
     var userInfo = document.getElementById('user-info');
     document.addEventListener('DOMContentLoaded', function() {
