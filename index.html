@@ -17,9 +17,16 @@
     var tg_data = tg.initData;
     tg.bgColor = '8a6565';
     // Пример отображения данных на странице
-    var userInfoElement = document.createElement('div');
-    userInfoElement.textContent = 'User ID: ' + tg_data.user.id + ', Name: ' + tg_data.user.name;
-    document.body.appendChild(userInfoElement);
+    var userInfo = document.getElementById('user-info');
+    document.addEventListener('DOMContentLoaded', function() {
+            var greetingElement = document.createElement('p');
+            greetingElement.textContent = 'User ID: ' + tg_data.user.id + 'Name: ' + tg_data.user.name;
+            document.body.appendChild(greetingElement);
+
+            var greetingElement1 = document.createElement('p');
+            greetingElement1.textContent = 'ТВОИ ДАННЫЕ';
+            document.body.appendChild(greetingElement1);
+        });
 </script>
 </body>
 </html>
